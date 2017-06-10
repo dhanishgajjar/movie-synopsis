@@ -5,10 +5,14 @@ var colors = require('colors');
 // Function to print out the movie details
 function print(title, year, rating, synopsis) {
 
-	const report = 
-		`${colors.bold.underline.white(title)}
-		Year of Release: ${colors.bold.white(year)} - Rating: ${colors.bold.white(rating)}
-		Synopsis: ${colors.white(synopsis)}`
+	const report = `
+
+${colors.bold.underline.white(title)}
+
+Year of Release: ${colors.bold.white(year)} - Rating: ${colors.bold.white(rating)}
+
+Synopsis: ${colors.white(synopsis)}
+`
 		console.log(report);
 }
 
