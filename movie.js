@@ -7,11 +7,11 @@ function print(title, year, rating, synopsis) {
 
 	const report = `
 
-${colors.bold.underline.white(title)}
+${colors.bold.red(title)}
 
-Year of Release: ${colors.bold.white(year)} - Rating: ${colors.bold.white(rating)}
+Year of Release: ${colors.bold.cyan(year)} - Rating: ${colors.bold.yellow(rating)}
 
-Synopsis: ${colors.white(synopsis)}
+Synopsis: ${colors.green(synopsis)}
 `
 		console.log(report);
 }
@@ -25,7 +25,7 @@ function fetchMovie(type, keyword) {
 	}
 
 	// Connecting to the API
-	const request = https.get(`https://yts.ag/api/v2/list_movies.json?${type}=${keyword}`, response => {
+	const request = https.get(`https://yts.am/api/v2/list_movies.json?${type}=${keyword}`, response => {
 		let body = '';
 
 		response.on('data', data => {
